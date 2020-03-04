@@ -15,7 +15,6 @@ namespace PhoneBookTestApp
         {
             try
             {
-                DatabaseUtil.CleanUp();
                 DatabaseUtil.initializeDatabase();
                 
                 // Create person objects and put them in the PhoneBook and database
@@ -43,6 +42,7 @@ namespace PhoneBookTestApp
             }
         }
 
+        #region dml ddl operations
         public static void AddSampleData()
         {
             PhoneBook phonebook = new PhoneBook();
@@ -109,5 +109,6 @@ namespace PhoneBookTestApp
 
             GetAndDisplayAll();
         }
+        #endregion
     }
 }
